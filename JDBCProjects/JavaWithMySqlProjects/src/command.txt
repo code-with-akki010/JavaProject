@@ -1,0 +1,5 @@
+compile the jdbc code ---
+ cd c:\JavaProject\JDBCProjects\JavaWithMySqlProjects
+>> javac -cp lib\mysql-connector-j-9.4.0.jar src\Main.java
+run the jdbc code ---
+java -cp "lib\mysql-connector-j-9.4.0.jar;src" Main
