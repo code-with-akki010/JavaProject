@@ -15,12 +15,21 @@ package Assignment11;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class CheckConnectivityWithMySql {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://127.0.0.1:3306/company"; 
-        String user = "root"; 
-        String password = "admin"; 
+         Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter MySQL URL (e.g., jdbc:mysql://127.0.0.1:3306/company): ");
+        String url = sc.nextLine();
+
+        System.out.print("Enter MySQL username: ");
+        String user = sc.nextLine();
+
+        System.out.print("Enter MySQL password: ");
+        String password = sc.nextLine();
+ 
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             if (conn != null) {
@@ -31,6 +40,9 @@ public class CheckConnectivityWithMySql {
         } catch (SQLException e) {
             System.out.println("MySQL connection failed!");
             e.printStackTrace();
+        }
+        finally {
+            sc.close();
         }
     }
 }
