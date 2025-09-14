@@ -1,7 +1,7 @@
 /* 
  Class to check connectivity with a MySQL database using JDBC.
  It establishes a connection to a specified database 
- using the provided URL, username, and password.
+ using the provided URL, username, and password from user input.
 
  If the connection is successful, it prints a success message, 
  otherwise it handles SQLException and prints error details.
@@ -19,16 +19,25 @@ import java.util.Scanner;
 
 public class CheckConnectivityWithMySql {
     public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter MySQL URL (e.g., jdbc:mysql://127.0.0.1:3306/company): ");
-        String url = sc.nextLine();
+        System.out.print("Enter MySQL server address (e.g., 127.0.0.1): ");
+        String server = sc.nextLine();
+
+        System.out.print("Enter MySQL port (default 3306): ");
+        String port = sc.nextLine();
+        if (port.trim().isEmpty()) port = "3306";
+
+        System.out.print("Enter database name: ");
+        String dbName = sc.nextLine();
 
         System.out.print("Enter MySQL username: ");
         String user = sc.nextLine();
 
         System.out.print("Enter MySQL password: ");
         String password = sc.nextLine();
+
+        String url = "jdbc:mysql://" + server + ":" + port + "/" + dbName;     
  
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {

@@ -17,11 +17,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MouseClickApplet extends JFrame implements MouseListener {
+public class MouseClickSwing extends JFrame implements MouseListener {
     int clickCount = 0;
     JLabel label;
 
-    MouseClickApplet() {
+    MouseClickSwing() {
         setTitle("Mouse Click Event Demo");
         setSize(400, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,6 +68,6 @@ public class MouseClickApplet extends JFrame implements MouseListener {
     }
 
     public static void main(String[] args) {
-        new MouseClickApplet();
+        new MouseClickSwing();
     }
 }
