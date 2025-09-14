@@ -2,5 +2,20 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "JDBCProjects/JavaWithMySqlProjects/lib/mysql-connector-j-9.4.0.jar"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "admin",
+            "database": "MySql",
+            "username": "root"
+        }
     ]
 }
