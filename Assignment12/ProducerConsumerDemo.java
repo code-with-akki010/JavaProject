@@ -2,9 +2,9 @@ package Assignment12;
 
 class SharedBuffer {
     // Static shared array (circular queue)
-    static int[] buffer = new int[5]; // size = 5
-    static int in = 0; // points to next write position
-    static int out = 0; // points to next read position
+    static int[] buffer = new int[5];   // size = 5
+    static int in = 0;   // points to next write position
+    static int out = 0;  // points to next read position
     static int count = 0; // number of items in buffer
 }
 
@@ -77,11 +77,11 @@ public class ProducerConsumerDemo {
     public static void main(String[] args) {
         // Create multiple producers and consumers
         for (int i = 1; i <= 10; i++) {
-            new Producer(i).start(); // Produces items 1 to 10
+            new Producer(i).start();  // Produces items 1 to 10
         }
 
         for (int i = 1; i <= 10; i++) {
-            new Consumer(i).start(); // Consumers
+            new Consumer(i).start();  // Consumers
         }
     }
 }

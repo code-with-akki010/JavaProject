@@ -1,3 +1,16 @@
+/* 
+ Class to demonstrate Mouse Click Events using Swing.
+ It creates a JFrame window, listens for mouse clicks, 
+ and displays which mouse button (Left, Middle, Right) was clicked 
+ along with the total number of clicks.
+
+ It implements MouseListener interface methods, 
+ uses JLabel to display instructions, 
+ and shows results using JOptionPane dialog boxes.
+
+ Author: Akshay Basak
+ Date: 10-09-2025
+*/
 package Assignment9;
 
 import javax.swing.*;
