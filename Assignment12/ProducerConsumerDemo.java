@@ -1,3 +1,21 @@
+/* 
+ Class to demonstrate Producer-Consumer problem using threads and synchronization.
+ It uses a shared circular buffer of fixed size where:
+   - Producers insert items into the buffer.
+   - Consumers remove items from the buffer.
+
+ Synchronization ensures that:
+   - Producers wait if the buffer is full.
+   - Consumers wait if the buffer is empty.
+   - Proper notification is given when buffer state changes.
+
+ This implementation prevents race conditions using synchronized blocks,
+ wait(), and notifyAll() methods for thread coordination.
+
+ Author: Akshay Basak
+ Date: 15-07-2025
+*/
+
 package Assignment12;
 
 class SharedBuffer {
