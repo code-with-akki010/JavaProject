@@ -40,7 +40,7 @@ class SorterThread extends Thread {
     @Override
     public void run() {
         try {
-            synchronized (names) {
+            synchronized (names) { 
                 Collections.sort(names);
             }
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
